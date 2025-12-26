@@ -1,0 +1,13 @@
+stuff i plan to add
+- cool header
+- project section with timeline made up of cards with tags
+	- filter by tag
+- footer with copyright stuff (and contact me?)
+- navbar on side could be better
+
+stuff to improve on from old site
+- smaller font and more empty space
+- move section titles to side rather than center
+
+notes
+- put data for components in objects in external file and use .map to convert data into jsx elements
