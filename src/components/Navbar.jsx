@@ -1,7 +1,7 @@
 export default function Navbar() {
     return (
         <header className="navbar">
-            <span>Title</span>
+            <span>Jason Chen</span>
             <nav>
                 <ul className="menu">
                     <li>Menu Option 1</li>
