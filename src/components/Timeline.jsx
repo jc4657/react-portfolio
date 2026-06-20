@@ -7,7 +7,7 @@ export default function Timeline() {
 
     return (
         <div class="timeline">
-            {projects}
+            {projects.toReversed()}
         </div>
     )
 }

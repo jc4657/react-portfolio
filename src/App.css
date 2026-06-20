@@ -1,5 +1,9 @@
+:root {
+    --navbar-width: 15%;
+}
+
 .sections {
-  width: 83.3%;
+  width: calc(100% - var(--navbar-width));
   margin-left: auto;
   display: flex;
   align-items: center;
@@ -11,9 +15,13 @@ h1 {
   margin-bottom: 1rem;
 }
 
+nav {
+  width: 100%;
+}
+
 .navbar {
   height: 100vh;
-  width: 12%;
+  width: var(--navbar-width);
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -21,13 +29,13 @@ h1 {
   font-size: 1rem;
   position: fixed;
   border-right: 1px solid white;
-  padding-right: 4rem;
 }
 
 .menu {
   list-style: none;
-  padding-left: 2rem;
   margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 .menu > li {
@@ -37,7 +45,8 @@ h1 {
 .navbar > span {
   border-bottom: 1px solid white;
   width: 100%;
-  padding: 2rem;
+  padding: 1rem 0rem;
+  text-align: center;
 }
 
 .intro {
@@ -47,11 +56,10 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("./assets/react.svg");
+  background-image: url("/src/assets/react.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  /* margin-bottom: 5%; */
   border-bottom: 1px solid white;
 }
 
