@@ -65,23 +65,14 @@ nav {
 
 .timeline {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem 0;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
   margin: 2rem 0;
+  width: 100%;
 }
 
 .project {
   padding: 1rem 1.5rem;
   background: #000000;
   border-radius: 8px;
-}
-
-.project.title {
-  grid-column: 1;
-  text-align: left;
-}
-
-.project.description {
-  grid-column: 2;
-  text-align: left;
 }

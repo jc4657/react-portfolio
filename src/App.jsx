@@ -7,8 +7,6 @@ import Header from './components/Header.jsx'
 import Timeline from './components/Timeline.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <Navbar />

@@ -1,12 +1,16 @@
 export default [
     {
-        date: "1/11/1111",
-        description: "11111111111111",
-        title: "project 1"
+        id: 1,
+        date: "September to December 2023",
+        description: "Bank account management system",
+        title: "SE 181 Course Project",
+        tags: ["Java", "JUnit5", "Test-Driven Development"]
     },
     {
-        date: "2/22/2222",
-        description: "22222222222222",
-        title: "project 2"
+        id: 2,
+        date: "July to September 2025",
+        description: "Turn-based strategy web game",
+        title: "CIV 0",
+        tags: ["JavaScript", "PostgreSQL", "Rest API", "Node.js"]
     }
 ]
