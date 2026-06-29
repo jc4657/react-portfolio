@@ -2,11 +2,11 @@ import Project from "./Project"
 import projectsData from "../projectsData"
 import { useState } from "react"
 
-export default function Timeline() {
+export default function Timeline(props) {
 
-    const [filter, setFilter] = useState("all")
+    const [filter, setFilter] = useState("All")
 
-    const filteredProjectData = filter === "all"
+    const filteredProjectData = filter === "All"
         ? projectsData
         : projectsData.filter(project => project.tags.includes(filter))
 
@@ -18,10 +18,11 @@ export default function Timeline() {
             title={project.title}
             tags={project.tags}
             setFilter={setFilter}
+            darkMode={props.darkMode}
         />
     ))
 
-    const uniqueFilters = ["all", ...new Set(projectsData.map(project => project.tags).flat())]
+    const uniqueFilters = ["All", ...new Set(projectsData.map(project => project.tags).flat())]
     const filterButtons = uniqueFilters.map(filterOption => (
         <button
             key={filterOption}

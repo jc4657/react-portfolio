@@ -11,6 +11,6 @@ export default [
         date: "July to September 2025",
         description: "Turn-based strategy web game",
         title: "CIV 0",
-        tags: ["JavaScript", "PostgreSQL", "Rest API", "Node.js"]
+        tags: ["JavaScript", "PostgreSQL", "Node.js", "Express"]
     }
 ]

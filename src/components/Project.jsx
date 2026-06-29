@@ -4,7 +4,7 @@ export default function Project(props) {
         <button
             key={tag}
             type="button"
-            className="tag"
+            className={"tag" + (props.darkMode ? " dark" : " light")}
             onClick={() => props.setFilter(tag)}
         >
             {tag}
@@ -13,7 +13,7 @@ export default function Project(props) {
 
     return (
         <>
-            <div className="project">
+            <div className={"project" + (props.darkMode ? " dark" : " light")}>
                 <h3>{props.title}</h3>
                 <p>{props.date}</p>
                 <p>{props.description}</p>

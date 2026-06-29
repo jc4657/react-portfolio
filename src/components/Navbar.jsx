@@ -1,7 +1,7 @@
-export default function Navbar() {
+export default function Navbar({ darkMode }) {
     return (
-        <header className="navbar">
-            <span>Jason Chen</span>
+        <header className={"navbar" + (darkMode ? " dark" : " light")}>
+            <span className={"name" + (darkMode ? " dark" : " light")}>Jason Chen</span>
             <nav>
                 <ul className="menu">
                     <li>Menu Option 1</li>

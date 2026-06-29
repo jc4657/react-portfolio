@@ -1,6 +1,6 @@
-export default function Header() {
+export default function Header({ darkMode }) {
     return (
-        <header className="intro">
+        <header className={"header" + (darkMode ? " dark" : " light")}>
             <h1>Header</h1>
         </header>
     )

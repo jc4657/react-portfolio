@@ -1,5 +1,5 @@
 :root {
-    --navbar-width: 15%;
+    --navbar-width: 17%;
 }
 
 .sections {
@@ -16,43 +16,39 @@ h1 {
 }
 
 nav {
-  width: 100%;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  padding-left: 2rem;
 }
 
 .navbar {
   height: 100vh;
   width: var(--navbar-width);
-  background-color: black;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   font-size: 1rem;
   position: fixed;
-  border-right: 1px solid white;
 }
 
 .menu {
   list-style: none;
-  margin: 0;
-  padding: 0;
-  text-align: center;
+  padding-left: 0;
 }
 
 .menu > li {
   margin: 2rem 0;
 }
 
-.navbar > span {
+.name {
   border-bottom: 1px solid white;
-  width: 100%;
-  padding: 1rem 0rem;
-  text-align: center;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  padding: 1.7rem 2rem;
 }
 
-.intro {
+.header {
   height: 80vh;
   width: 100%;
-  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,7 +56,6 @@ nav {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  border-bottom: 1px solid white;
 }
 
 .timeline {
@@ -73,6 +68,61 @@ nav {
 
 .project {
   padding: 1rem 1.5rem;
-  background: #000000;
   border-radius: 8px;
+}
+
+.dark {
+  background-color: #242424;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.light {
+  background-color: #ffffff;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.dark .navbar {
+  background-color: #000000;
+  border-right: 1px solid white;
+}
+
+.light .navbar {
+  border-right: 1px solid black;
+}
+
+.dark .project {
+  background-color: black;
+  border: 1px solid #ffffff;
+}
+
+.light .project {
+  background-color: #f5f5f5;
+  border: 1px solid #000000;
+}
+
+.dark-mode-button {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dark .name {
+  background-color: black;
+  border-bottom: 1px solid white;
+}
+
+.light .name {
+  border-bottom: 1px solid black;
+}
+
+.dark .header {
+  border-bottom: 1px solid white;
+}
+
+.light .header {
+  border-bottom: 1px solid black;
 }
