@@ -2,7 +2,7 @@ import Project from "./Project"
 import projectsData from "../projectsData"
 import { useState } from "react"
 
-export default function Timeline(props) {
+export default function Timeline({ darkMode }) {
 
     const [filter, setFilter] = useState("All")
 
@@ -18,7 +18,7 @@ export default function Timeline(props) {
             title={project.title}
             tags={project.tags}
             setFilter={setFilter}
-            darkMode={props.darkMode}
+            darkMode={darkMode}
         />
     ))
 
@@ -27,7 +27,7 @@ export default function Timeline(props) {
         <button
             key={filterOption}
             onClick={() => setFilter(filterOption)}
-            className={filter === filterOption ? "active" : ""}
+            className={(filter === filterOption ? "active " : "") + (darkMode ? "dark" : "light")}
         >
             {filterOption}
         </button>
