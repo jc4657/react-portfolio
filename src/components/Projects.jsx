@@ -1,8 +1,8 @@
-import Project from "./Project"
+import ProjectCard from "./ProjectCard"
 import projectsData from "../projectsData"
 import { useState } from "react"
 
-export default function Timeline({ darkMode }) {
+export default function Projects({ darkMode }) {
 
     const [filter, setFilter] = useState("All")
 
@@ -11,7 +11,7 @@ export default function Timeline({ darkMode }) {
         : projectsData.filter(project => project.tags.includes(filter))
 
     const projects = filteredProjectData.map(project => (
-        <Project
+        <ProjectCard
             key={project.id}
             date={project.date}
             description={project.description}
@@ -34,14 +34,14 @@ export default function Timeline({ darkMode }) {
     ))
 
     return (
-        <>
+        <div className={ "projects" + (darkMode ? " dark" : " light") }>
             <h1>Projects</h1>
             <div className="filter-buttons">
                 {filterButtons}
             </div>
-            <div className="timeline">
-                {projects}
+            <div className="project-cards">
+                {projects.toReversed()}
             </div>
-        </>
+        </div>
     )
 }

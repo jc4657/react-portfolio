@@ -1,5 +1,6 @@
 :root {
-    --navbar-width: 17%;
+    --navbar-width: 18%;
+    --component-border-width: 0.5px;
 }
 
 .sections {
@@ -28,6 +29,16 @@ nav {
   flex-direction: column;
   font-size: 1rem;
   position: fixed;
+
+  .dark & {
+    background-color: #000000;
+    border-right: var(--component-border-width) solid white;
+  }
+
+  .light & {
+    background-color: #f5f5f5;
+    border-right: var(--component-border-width) solid black;
+  }
 }
 
 .menu {
@@ -43,21 +54,28 @@ nav {
   width: -moz-available;
   width: -webkit-fill-available;
   padding: 1.5rem 2rem;
+
+  .dark & {
+    background-color: black;
+    border-bottom: var(--component-border-width) solid white;
+  }
+
+  .light & {
+    background-color: #f5f5f5;
+    border-bottom: var(--component-border-width) solid black;
+  }
 }
 
 .header {
   height: 80vh;
-  width: 100%;
-  display: flex;
   justify-content: center;
-  align-items: center;
   background-image: url("/src/assets/react.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 80vh;
 }
 
-.timeline {
+.project-cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
@@ -69,6 +87,16 @@ nav {
 .project {
   padding: 1rem;
   border-radius: 8px;
+
+  .dark & {
+    background-color: black;
+    border: var(--component-border-width) solid #ffffff;
+  }
+
+  .light & {
+    background-color: #f5f5f5;
+    border: var(--component-border-width) solid #000000;
+  }
 }
 
 .dark {
@@ -81,25 +109,6 @@ nav {
   color: rgba(0, 0, 0, 0.87);
 }
 
-.dark .navbar {
-  background-color: #000000;
-  border-right: 1px solid white;
-}
-
-.light .navbar {
-  border-right: 1px solid black;
-}
-
-.dark .project {
-  background-color: black;
-  border: 1px solid #ffffff;
-}
-
-.light .project {
-  background-color: #f5f5f5;
-  border: 1px solid #000000;
-}
-
 .dark-mode-button {
   position: fixed;
   top: 1rem;
@@ -110,42 +119,42 @@ nav {
   padding: 0;
 }
 
-.dark .name {
-  background-color: black;
-  border-bottom: 1px solid white;
-}
-
-.light .name {
-  border-bottom: 1px solid black;
-}
-
-.dark .header {
-  border-bottom: 1px solid white;
-}
-
-.light .header {
-  border-bottom: 1px solid black;
-}
-
 .filter-buttons {
   width: 80%;
   display: flex;
   justify-content: center;
+  padding: 2rem 0;
 }
 
 .filter-buttons > button {
   background: transparent;
   cursor: pointer;
+
+  .dark & {
+    border: 1px solid white;
+  }
+
+  .light & {
+    border: 1px solid black;
+  }
+
+  &.active {
+    border: 3px solid lightskyblue;
+  }
 }
 
-.dark .filter-buttons > button {
-  border: 1px solid white;
-}
+.sections > div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 3rem 0;
 
-.light .filter-buttons > button {
-  border: 1px solid black;
-}
+  &.dark {
+    border-bottom: var(--component-border-width) solid white;
+  }
 
-.filter-buttons > button.active {
-  border: 3px solid lightskyblue;
+  &.light {
+    border-bottom: var(--component-border-width) solid black;
+  }
 }

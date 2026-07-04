@@ -1,4 +1,4 @@
-export default function Project(props) {
+export default function ProjectCard(props) {
 
     const tags = props.tags.map(tag => (
         <button
