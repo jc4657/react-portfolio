@@ -7,7 +7,7 @@ import DarkModeButton from './components/DarkModeButton.jsx'
 import About from './components/About.jsx'
 
 function App() {
-  const [darkMode, setDarkMode] = useState(true)
+  const [darkMode, setDarkMode] = useState(true);
 
   return (
     <div className={darkMode ? "dark" : "light"}>

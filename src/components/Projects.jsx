@@ -4,25 +4,28 @@ import { useState } from "react"
 
 export default function Projects({ darkMode }) {
 
-    const [filter, setFilter] = useState("All")
+    const [filter, setFilter] = useState("All");
 
     const filteredProjectData = filter === "All"
         ? projectsData
-        : projectsData.filter(project => project.tags.includes(filter))
+        : projectsData.filter(project => project.tags.includes(filter));
 
-    const projects = filteredProjectData.map(project => (
+    const sortedProjectData = filteredProjectData.sort((a, b) => b["end-date"] - a["end-date"]);
+
+    const projects = sortedProjectData.map(project => (
         <ProjectCard
             key={project.id}
-            date={project.date}
+            start-date={project["start-date"]}
+            end-date={project["end-date"]}
             description={project.description}
             title={project.title}
             tags={project.tags}
             setFilter={setFilter}
             darkMode={darkMode}
         />
-    ))
+    ));
 
-    const uniqueFilters = ["All", ...new Set(projectsData.map(project => project.tags).flat())]
+    const uniqueFilters = ["All", ...new Set(projectsData.map(project => project.tags).flat())];
     const filterButtons = uniqueFilters.map(filterOption => (
         <button
             key={filterOption}
@@ -31,7 +34,7 @@ export default function Projects({ darkMode }) {
         >
             {filterOption}
         </button>
-    ))
+    ));
 
     return (
         <div className={ "projects" + (darkMode ? " dark" : " light") }>
@@ -40,7 +43,7 @@ export default function Projects({ darkMode }) {
                 {filterButtons}
             </div>
             <div className="project-cards">
-                {projects.toReversed()}
+                {projects}
             </div>
         </div>
     )
