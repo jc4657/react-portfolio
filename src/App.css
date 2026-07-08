@@ -77,11 +77,12 @@ nav {
 
 .project-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, 21rem);
   gap: 2rem;
   margin: 2rem;
   width: -moz-available;
   width: -webkit-fill-available;
+  justify-content: center;
 }
 
 .project {
@@ -124,6 +125,7 @@ nav {
   display: flex;
   justify-content: center;
   padding: 2rem 0;
+  flex-wrap: wrap;
 }
 
 .filter-buttons > button {
@@ -156,5 +158,16 @@ nav {
 
   &.light {
     border-bottom: var(--component-border-width) solid black;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    display: none;
+  }
+
+  .sections {
+    width: 100%;
+    margin-left: 0;
   }
 }
