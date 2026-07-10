@@ -9,6 +9,22 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+
+  & > div {
+      display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 3rem 0;
+
+    &.dark {
+      border-bottom: var(--component-border-width) solid white;
+    }
+
+    &.light {
+      border-bottom: var(--component-border-width) solid black;
+    }
+  }
 }
 
 h1 {
@@ -44,10 +60,10 @@ nav {
 .menu {
   list-style: none;
   padding-left: 0;
-}
 
-.menu > li {
-  margin: 2rem 0;
+  & > li {
+    margin: 1.5rem 0;
+  }
 }
 
 .name {
@@ -126,38 +142,28 @@ nav {
   justify-content: center;
   padding: 2rem 0;
   flex-wrap: wrap;
+
+  & > button {
+    background: transparent;
+    cursor: pointer;
+
+    .dark & {
+      border: 1px solid white;
+    }
+
+    .light & {
+      border: 1px solid black;
+    }
+
+    &.active {
+      border: 3px solid lightskyblue;
+    }
+  }
 }
 
-.filter-buttons > button {
-  background: transparent;
-  cursor: pointer;
-
-  .dark & {
-    border: 1px solid white;
-  }
-
-  .light & {
-    border: 1px solid black;
-  }
-
-  &.active {
-    border: 3px solid lightskyblue;
-  }
-}
-
-.sections > div {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  padding: 3rem 0;
-
-  &.dark {
-    border-bottom: var(--component-border-width) solid white;
-  }
-
-  &.light {
-    border-bottom: var(--component-border-width) solid black;
+.about {
+  & > p {
+    padding: 0 10rem;
   }
 }
 

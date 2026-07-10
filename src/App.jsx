@@ -15,8 +15,8 @@ function App() {
       <div className="sections">
         <DarkModeButton darkMode={darkMode} toggleDarkMode={() => setDarkMode(!darkMode)} />
         <Header darkMode={darkMode} />
-        <Projects darkMode={darkMode} />
         <About darkMode={darkMode} />
+        <Projects darkMode={darkMode} />
       </div>
     </div>
   )

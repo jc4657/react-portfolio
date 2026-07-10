@@ -4,9 +4,9 @@ export default function Navbar({ darkMode }) {
             <span className={"name" + (darkMode ? " dark" : " light")}>Jason Chen</span>
             <nav>
                 <ul className="menu">
-                    <li>Menu Option 1</li>
-                    <li>Menu Option 2</li>
-                    <li>Menu Option 3</li>
+                    <li>About</li>
+                    <li>Projects</li>
+                    <li>Contact</li>
                 </ul>
             </nav>
         </header>
