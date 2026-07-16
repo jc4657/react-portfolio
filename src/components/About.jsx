@@ -1,6 +1,6 @@
 export default function About({ darkMode }) {
     return (
-        <div className={ "about" + (darkMode ? " dark" : " light") }>
+        <div className={ "about" + (darkMode ? " dark" : " light") } id="about">
             <h1>About</h1>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue et turpis et mollis. Aliquam rutrum luctus mi eu fermentum. Suspendisse potenti. Maecenas in convallis nulla. Fusce id lorem sed lacus egestas rutrum. Ut porttitor quis risus id elementum. Pellentesque molestie massa et velit pellentesque accumsan.
