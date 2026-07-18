@@ -5,7 +5,7 @@ export default function Navbar({ darkMode }) {
             <div className="menu">
                 <a href="#about">About</a>
                 <a href="#projects">Projects</a>
-                <a>Contact</a>
+                <a href="#contact">Contact</a>
             </div>
         </nav>
     )

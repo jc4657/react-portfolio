@@ -65,9 +65,12 @@ h1 {
 
   & > a {
     padding: 1rem 0;
-    text-decoration: none;
-    color: inherit;
   }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .name {

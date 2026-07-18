@@ -37,7 +37,7 @@ export default function Projects({ darkMode }) {
     ));
 
     return (
-        <div className={ "projects" + (darkMode ? " dark" : " light") } id="projects">
+        <div className={"projects" + (darkMode ? " dark" : " light")} id="projects">
             <h1>Projects</h1>
             <div className="filter-buttons">
                 {filterButtons}
