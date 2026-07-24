@@ -1,6 +1,7 @@
 :root {
     --navbar-width: 18%;
     --component-border-width: 0.5px;
+    --theme: #e6979a;
     scroll-behavior: smooth;
 }
 
@@ -29,7 +30,7 @@
 }
 
 h1 {
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   text-transform: uppercase;
 }
 
@@ -135,8 +136,8 @@ a {
 
 .dark-mode-button {
   position: fixed;
-  top: 1rem;
-  right: 1rem;
+  top: 1.5rem;
+  right: 1.5rem;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -147,12 +148,13 @@ a {
   width: 80%;
   display: flex;
   justify-content: center;
-  padding: 2rem 0;
+  padding-bottom: 2rem;
   flex-wrap: wrap;
 
   & > button {
     background: transparent;
     cursor: pointer;
+    padding: 0.3rem 0.5rem;
 
     .dark & {
       border: 1px solid white;
@@ -163,7 +165,11 @@ a {
     }
 
     &.active {
-      border: 3px solid lightskyblue;
+      border: 2px solid var(--theme);
+    }
+
+    &:hover {
+      background: var(--theme);
     }
   }
 }
@@ -171,6 +177,22 @@ a {
 .about {
   & > p {
     width: 75%;
+  }
+}
+
+.contact {
+  & > nav {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+
+  &:hover {
+    color: var(--theme);
   }
 }
 

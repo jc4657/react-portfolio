@@ -8,7 +8,7 @@ export default function DarkModeButton({ darkMode, toggleDarkMode }) {
             className={"dark-mode-button" + (darkMode ? " dark" : " light")}
             onClick={toggleDarkMode}
         >
-            {darkMode ? <LightModeIcon /> : <DarkModeIcon />}
+            {darkMode ? <LightModeIcon className="icon" /> : <DarkModeIcon className="icon" />}
         </button>
     )
 }
