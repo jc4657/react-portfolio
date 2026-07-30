@@ -1,8 +1,8 @@
 :root {
-    --navbar-width: 18%;
-    --component-border-width: 0.5px;
-    --theme: #e6979a;
-    scroll-behavior: smooth;
+  --navbar-width: 18%;
+  --component-border-width: 0.5px;
+  --theme: #e6979a;
+  scroll-behavior: smooth;
 }
 
 .sections {
@@ -12,7 +12,7 @@
   align-items: center;
   flex-direction: column;
 
-  & > div {
+  &>div {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -42,7 +42,7 @@ h1 {
   font-size: 1rem;
   position: fixed;
 
-  & > div {
+  &>div {
     width: -moz-available;
     width: -webkit-fill-available;
     padding-left: 2rem;
@@ -64,7 +64,7 @@ h1 {
   display: flex;
   flex-direction: column;
 
-  & > a {
+  &>a {
     padding: 1rem 0;
   }
 }
@@ -145,13 +145,12 @@ a {
 }
 
 .filter-buttons {
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: center;
-  padding-bottom: 2rem;
   flex-wrap: wrap;
 
-  & > button {
+  &>button {
     background: transparent;
     cursor: pointer;
     padding: 0.3rem 0.5rem;
@@ -172,16 +171,20 @@ a {
       background: var(--theme);
     }
   }
+
+  .projects>& {
+    padding-bottom: 2rem;
+  }
 }
 
 .about {
-  & > p {
+  &>p {
     width: 75%;
   }
 }
 
 .contact {
-  & > nav {
+  &>nav {
     display: flex;
     gap: 1rem;
   }
