@@ -14,7 +14,6 @@
 
   &>div {
     display: flex;
-    align-items: center;
     flex-direction: column;
     width: 100%;
     padding: 3rem 0;
@@ -30,7 +29,7 @@
 }
 
 h1 {
-  margin-bottom: 3rem;
+  margin: 0 0 3rem 5%;
   text-transform: uppercase;
 }
 
@@ -66,6 +65,10 @@ h1 {
 
   &>a {
     padding: 1rem 0;
+  }
+
+  &>a:hover {
+    background-color: var(--theme);
   }
 }
 
@@ -148,12 +151,13 @@ a {
   width: 100%;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  gap: 0.5rem;
 
   &>button {
     background: transparent;
     cursor: pointer;
     padding: 0.3rem 0.5rem;
+    border-radius: 0.5rem;
 
     .dark & {
       border: 1px solid white;
@@ -174,20 +178,24 @@ a {
 
   .projects>& {
     padding-bottom: 2rem;
+    flex-wrap: wrap;
   }
 }
 
-.about {
+.about-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
   &>p {
     width: 75%;
   }
 }
 
-.contact {
-  &>nav {
-    display: flex;
-    gap: 1rem;
-  }
+.social-links {
+  display: flex;
+  gap: 2rem;
+  margin-left: 10%;
 }
 
 .icon {
@@ -197,6 +205,29 @@ a {
   &:hover {
     color: var(--theme);
   }
+}
+
+.icon-animated {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1), opacity 0.3s ease;
+}
+
+.icon-wrap {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.icon-in {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.icon-out {
+  transform: translate(0, -100px);
+  opacity: 0;
+  pointer-events: none;
 }
 
 @media (max-width: 1024px) {

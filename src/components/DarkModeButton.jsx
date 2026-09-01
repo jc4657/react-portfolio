@@ -8,7 +8,10 @@ export default function DarkModeButton({ darkMode, toggleDarkMode }) {
             className={"dark-mode-button" + (darkMode ? " dark" : " light")}
             onClick={toggleDarkMode}
         >
-            {darkMode ? <LightModeIcon className="icon" /> : <DarkModeIcon className="icon" />}
+            <div className="icon-wrap">
+                <LightModeIcon className={"icon icon-animated" + (darkMode ? " icon-in" : " icon-out")} />
+                <DarkModeIcon className={"icon icon-animated" + (darkMode ? " icon-out" : " icon-in")} />
+            </div>
         </button>
     )
 }
