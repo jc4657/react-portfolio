@@ -14,5 +14,13 @@ export default [
         description: "Turn-based strategy web game",
         title: "CIV 0",
         tags: ["JavaScript", "PostgreSQL", "Node.js", "Express"]
+    },
+    {
+        id: 3,
+        "start-date": new Date(2025, 1),
+        "end-date": new Date(2025, 3),
+        description: "Static portfolio website",
+        title: "My Portfolio",
+        tags: ["HTML", "CSS", "JavaScript", "Anime.js"]
     }
 ]

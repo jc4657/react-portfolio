@@ -44,7 +44,7 @@ h1 {
   &>div {
     width: -moz-available;
     width: -webkit-fill-available;
-    padding-left: 2rem;
+    padding: 0 1rem;
     margin-top: 1rem;
   }
 
@@ -64,11 +64,12 @@ h1 {
   flex-direction: column;
 
   &>a {
-    padding: 1rem 0;
+    padding: 1rem;
+    transition: border-left 0.3s linear 0s;
   }
 
   &>a:hover {
-    background-color: var(--theme);
+    border-left: 0.5rem solid var(--theme);
   }
 }
 
@@ -104,7 +105,7 @@ a {
 
 .project-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 21rem);
+  grid-template-columns: repeat(auto-fit, 23rem);
   gap: 2rem;
   margin: 2rem;
   width: -moz-available;
@@ -115,6 +116,10 @@ a {
 .project {
   padding: 1rem;
   border-radius: 8px;
+
+  &>h3 {
+    margin: 0;
+  }
 
   .dark & {
     background-color: black;
@@ -167,11 +172,8 @@ a {
       border: 1px solid black;
     }
 
-    &.active {
-      border: 2px solid var(--theme);
-    }
-
-    &:hover {
+    &.active, &:hover {
+      border: 1px solid var(--theme);
       background: var(--theme);
     }
   }
@@ -186,7 +188,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
   &>p {
     width: 75%;
   }
