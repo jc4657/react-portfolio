@@ -4,10 +4,13 @@ export default function About({ darkMode }) {
             <h1>About</h1>
             <div className="about-text">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue et turpis et mollis. Aliquam rutrum luctus mi eu fermentum. Suspendisse potenti. Maecenas in convallis nulla. Fusce id lorem sed lacus egestas rutrum. Ut porttitor quis risus id elementum. Pellentesque molestie massa et velit pellentesque accumsan.
+                    Hi, I'm Jason! I'm a recent computer science graduate interested in software development. Through my coursework and projects, I've had experience with both front-end and back-end web development, and have rudimentary knowledge of the most common programming languages (Java, Python, Javascript, C, etc.).
                 </p>
                 <p>
-                    Duis ultrices feugiat bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse dignissim dui sit amet posuere tempor. Aenean dapibus orci odio, eu convallis orci consequat non. Vestibulum lectus enim, rhoncus auctor ipsum id, aliquet congue velit. Nam posuere enim et laoreet hendrerit. In vitae dolor pharetra, porta quam a, laoreet.
+                    I enjoy the problem solving aspect of creating software, especially the process of breaking a problem down into smaller parts and building them back up. I also appreciate the constant need to learn on every project: there's always something to improve.
+                </p>
+                <p>
+                    I'm currently looking for opportunities where I can continue developing my skills, work with and learn from an experienced team, and contribute to real-world software projects.
                 </p>
             </div>
         </div>

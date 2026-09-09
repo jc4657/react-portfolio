@@ -29,8 +29,9 @@
 }
 
 h1 {
-  margin: 0 0 3rem 5%;
+  padding: 0 0 3rem 5%;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .navbar {
@@ -65,11 +66,11 @@ h1 {
 
   &>a {
     padding: 1rem;
-    transition: border-left 0.3s linear 0s;
+    transition: color 0.3s ease-out 0s;
   }
 
   &>a:hover {
-    border-left: 0.5rem solid var(--theme);
+    color: var(--theme);
   }
 }
 
@@ -79,8 +80,6 @@ a {
 }
 
 .name {
-  width: -moz-available;
-  width: -webkit-fill-available;
   padding: 1.5rem 2rem;
 
   .dark & {
@@ -163,6 +162,7 @@ a {
     cursor: pointer;
     padding: 0.3rem 0.5rem;
     border-radius: 0.5rem;
+    transition: background 0.3s ease-out 0s;
 
     .dark & {
       border: 1px solid white;
