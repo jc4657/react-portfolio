@@ -20,12 +20,13 @@ export default function Projects({ darkMode }) {
             description={project.description}
             title={project.title}
             tags={project.tags}
+            link={project.link}
             setFilter={setFilter}
             darkMode={darkMode}
         />
     ));
 
-    const uniqueFilters = ["All", ...new Set(projectsData.map(project => project.tags).flat())];
+    const uniqueFilters = ["All", ...new Set(projectsData.map(project => project.tags).flat())].sort();
     const filterButtons = uniqueFilters.map(filterOption => (
         <button
             key={filterOption}

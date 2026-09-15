@@ -1,3 +1,5 @@
+import RedirectIcon from "../assets/redirect.svg?react"
+
 export default function ProjectCard(props) {
 
     const tags = props.tags.map(tag => (
@@ -14,7 +16,13 @@ export default function ProjectCard(props) {
     return (
         <>
             <div className={"project" + (props.darkMode ? " dark" : " light")}>
-                <h3>{props.title}</h3>
+                <div className="project-card-header">
+                    <h3>{props.title}</h3>
+                    <a href={props.link} target="_blank">
+                        <RedirectIcon className="icon" />
+                    </a>
+                    
+                </div>
                 <p>
                     {((props["start-date"].getYear() === props["end-date"].getYear()) && (props["start-date"].getMonth() !== props["end-date"].getMonth())
                         ? props["start-date"].toLocaleDateString("en-US", {

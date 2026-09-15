@@ -1,4 +1,4 @@
-import EmailIcon from "../assets/envelope.svg?react"
+import EmailIcon from "../assets/mail.svg?react"
 import LinkedInIcon from "../assets/linkedin.svg?react"
 import GitHubIcon from "../assets/github.svg?react"
 
