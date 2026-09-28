@@ -24,6 +24,8 @@ export default [
         description: "Static portfolio website",
         title: "My Portfolio",
         tags: ["HTML", "CSS", "JavaScript", "Anime.js"],
-        link: "https://github.com/jc4657/my-portfolio"
+        link: "https://github.com/jc4657/my-portfolio",
+        clip: "/projects/my-portfolio-clip.mp4",
+        poster: "/projects/my-portfolio-poster.jpg"
     }
 ]

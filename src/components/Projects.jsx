@@ -21,6 +21,8 @@ export default function Projects({ darkMode }) {
             title={project.title}
             tags={project.tags}
             link={project.link}
+            clip={project.clip}
+            poster={project.poster}
             setFilter={setFilter}
             darkMode={darkMode}
         />

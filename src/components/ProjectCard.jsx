@@ -21,9 +21,8 @@ export default function ProjectCard(props) {
                     <a href={props.link} target="_blank">
                         <RedirectIcon className="icon" />
                     </a>
-                    
                 </div>
-                <p>
+                <p className="project-card-date">
                     {((props["start-date"].getYear() === props["end-date"].getYear()) && (props["start-date"].getMonth() !== props["end-date"].getMonth())
                         ? props["start-date"].toLocaleDateString("en-US", {
                             month: "long",
@@ -40,6 +39,16 @@ export default function ProjectCard(props) {
                         })
                         )}
                 </p>
+                <video
+                    className="card-clip"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    poster={props.poster}
+                >
+                    <source src={props.clip} type="video/mp4" />
+                </video>
                 <p>{props.description}</p>
                 <div className="filter-buttons">
                     {tags}

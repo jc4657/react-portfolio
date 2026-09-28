@@ -248,6 +248,19 @@ a {
   display: flex;
 }
 
+.card-clip {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+.project-card-date {
+  margin: 0;
+  color: gray;
+}
+
 @media (max-width: 1024px) {
   .navbar {
     display: none;
