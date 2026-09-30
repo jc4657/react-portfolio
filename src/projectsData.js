@@ -15,7 +15,9 @@ export default [
         description: "Turn-based strategy web game",
         title: "CIV 0",
         tags: ["JavaScript", "PostgreSQL", "Node.js", "Express"],
-        link: "https://github.com/ChanBrandon/DoodCivProject"
+        link: "https://github.com/ChanBrandon/DoodCivProject",
+        clip: "/projects/civ-0-clip.mp4",
+        poster: "/projects/civ-0-poster.jpg"
     },
     {
         id: 3,
